@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elga Energy — Courtage Énergie B2B</title>
+  <meta name="description" content="Elga Energy accompagne les professionnels pour négocier électricité et gaz. Comparateur relié aux fournisseurs, appel d'offres en temps réel, suivi contractuel et optimisation des coûts." />
+  <meta property="og:title" content="Elga Energy — Courtage Énergie B2B" />
+  <meta property="og:description" content="Comparateur relié aux fournisseurs, économies durables, accompagnement expert et transparent." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elgaenergy.github.io/elga-landing/" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/059669/ffffff&text=Elga+Energy" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Favicon inline (modifiable) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23059669'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='34' fill='white'%3EE%3C/text%3E%3C/svg%3E"/>
+
+  <!-- Tailwind CDN (pour une page statique sans build). Pour production, préférez un build Tailwind. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50:'#ecfdf5',100:'#d1fae5',200:'#a7f3d0',300:'#6ee7b7',400:'#34d399',500:'#10b981',600:'#059669',700:'#047857',800:'#065f46',900:'#064e3b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Swiper (carrousels fournisseurs & témoignages) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+  <script defer src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+
+  <style>
+    .container { max-width: 1200px; }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elga Energy",
+    "url": "https://elgaenergy.github.io/elga-landing/",
+    "sameAs": ["https://www.linkedin.com/company/elga-energy"],
+    "logo": "https://dummyimage.com/400x400/059669/ffffff&text=Elga"
+  }
+  </script>
+</head>
+<body class="text-slate-800 bg-white">
+  <!-- Barre d’annonce -->
+  <div class="w-full bg-slate-900 text-white text-sm">
+    <div class="container mx-auto px-4 py-2 text-center">Sans frais, sans engagement — Audit flash et comparaison en temps réel ⚡️</div>
+  </div>
+
+  <!-- Header sticky -->
+  <header id="site-header" class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-slate-200">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2 font-semibold">
+          <!-- Logo simplifié -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="6" class="fill-primary-600"/><path d="M7 13h10M7 9h10" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>Elga Energy</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#offre" class="hover:text-primary-700">Offre</a>
+          <a href="#fournisseurs" class="hover:text-primary-700">Fournisseurs</a>
+          <a href="#temoignages" class="hover:text-primary-700">Avis</a>
+          <a href="#faq" class="hover:text-primary-700">FAQ</a>
+          <a href="#contact" class="hover:text-primary-700">Contact</a>
+        </nav>
+        <a href="#devis" class="inline-flex items-center gap-2 rounded-xl bg-primary-600 text-white px-4 py-2 text-sm font-semibold hover:bg-primary-700 transition">
+          Lancer une comparaison
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="container mx-auto px-4 py-12 md:py-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Courtier en énergie pour professionnels<br class="hidden md:block"/> simple, net, efficace.</h1>
+          <p class="mt-4 text-lg text-slate-600">Mettez en concurrence des dizaines de fournisseurs et sécurisez des conditions durables. Interface claire, comparaisons instantanées, suivi contractuel.</p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#devis" class="rounded-xl bg-primary-600 text-white px-6 py-3 font-semibold hover:bg-primary-700 transition">Lancer une comparaison</a>
+            <a href="#offre" class="rounded-xl border border-slate-300 px-6 py-3 font-semibold hover:bg-slate-50 transition">Découvrir l’offre</a>
+          </div>
+          <p class="mt-3 text-sm text-slate-500">Sans frais & sans engagement.</p>
+        </div>
+        <div>
+          <div class="aspect-[16/9] rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 shadow-soft flex items-center justify-center">
+            <span class="text-slate-500">Visuel comparateur (placeholder)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-50 text-center">
+          <div class="text-3xl font-extrabold text-primary-600">15 000+</div>
+          <div class="text-sm font-medium">clients accompagnés*</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 text-center">
+          <div class="text-3xl font-extrabold text-primary-600">30+</div>
+          <div class="text-sm font-medium">fournisseurs comparés</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 text-center">
+          <div class="text-3xl font-extrabold text-primary-600">20 h</div>
+          <div class="text-sm font-medium">de temps gagné (médiane)</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 text-center">
+          <div class="text-3xl font-extrabold text-primary-600">2 Md€</div>
+          <div class="text-sm font-medium">de budget négocié*</div>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-slate-400">*Remplacez par vos chiffres réels (sources internes).</p>
+    </div>
+  </section>
+
+  <!-- Offre -->
+  <section id="offre" class="py-16 bg-slate-50">
+    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div class="order-2 lg:order-1">
+        <h2 class="text-2xl md:text-3xl font-bold">Baissez vos factures d’énergie sans frais</h2>
+        <p class="mt-3 text-slate-600">Accédez à des offres négociées sur des critères précis (profil de conso, puissances, clauses). Évitez les pièges contractuels et sécurisez des conditions claires.</p>
+        <ul class="mt-4 space-y-2 text-slate-700">
+          <li>• Audit flash : contrats, échéances, profils</li>
+          <li>• Appel d’offres multi‑fournisseurs</li>
+          <li>• Recommandation claire : prix & clauses clés</li>
+          <li>• Mise en place & suivi inclus</li>
+        </ul>
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="aspect-[4/3] rounded-2xl bg-white shadow-soft flex items-center justify-center">
+          <span class="text-slate-500">Image produit (placeholder)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparateur connecté -->
+  <section class="py-16">
+    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="aspect-[16/9] rounded-2xl bg-white shadow-soft flex items-center justify-center">
+          <span class="text-slate-500">Graphique / tableau comparatif</span>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold">Comparateur relié aux fournisseurs</h2>
+        <p class="mt-3 text-slate-600">Analyse et comparaison instantanées d’offres selon votre profil. Multi‑sites, multi‑compteurs, composants détaillés, export PDF.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrousel fournisseurs -->
+  <section id="fournisseurs" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <p class="text-center text-sm font-medium text-slate-600">Nous travaillons avec de nombreux fournisseurs</p>
+      <div class="mt-6 swiper" id="suppliers-swiper">
+        <div class="swiper-wrapper">
+          <!-- Remplacez par vos logos autorisés -->
+          <div class="swiper-slide flex items-center justify-center">
+            <div class="h-16 w-40 rounded-xl bg-slate-100 flex items-center justify-center">Logo 1</div>
+          </div>
+          <div class="swiper-slide flex items-center justify-center">
+            <div class="h-16 w-40 rounded-xl bg-slate-100 flex items-center justify-center">Logo 2</div>
+          </div>
+          <div class="swiper-slide flex items-center justify-center">
+            <div class="h-16 w-40 rounded-xl bg-slate-100 flex items-center justify-center">Logo 3</div>
+          </div>
+          <div class="swiper-slide flex items-center justify-center">
+            <div class="h-16 w-40 rounded-xl bg-slate-100 flex items-center justify-center">Logo 4</div>
+          </div>
+          <div class="swiper-slide flex items-center justify-center">
+            <div class="h-16 w-40 rounded-xl bg-slate-100 flex items-center justify-center">Logo 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section id="temoignages" class="py-16 bg-slate-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-end justify-between">
+        <h2 class="text-2xl md:text-3xl font-bold">Ils recommandent Elga Energy</h2>
+        <div class="flex gap-2">
+          <button id="prevTesti" class="rounded-lg border px-3 py-2 text-sm">◀</button>
+          <button id="nextTesti" class="rounded-lg border px-3 py-2 text-sm">▶</button>
+        </div>
+      </div>
+      <div class="mt-6 swiper" id="testimonials-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="p-6 bg-white rounded-2xl shadow-soft h-full">
+              <div class="flex items-center gap-2 text-yellow-500">★★★★★<span class="ml-2 text-slate-600 text-sm">5/5</span></div>
+              <p class="mt-3">Process clair de bout en bout, mise en place rapide et économies au rendez‑vous.</p>
+              <p class="mt-2 text-sm text-slate-500">Avis client (exemple)</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="p-6 bg-white rounded-2xl shadow-soft h-full">
+              <div class="flex items-center gap-2 text-yellow-500">★★★★★<span class="ml-2 text-slate-600 text-sm">5/5</span></div>
+              <p class="mt-3">Équipe réactive, recommandation argumentée, mise en concurrence efficace.</p>
+              <p class="mt-2 text-sm text-slate-500">Avis client (exemple)</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="p-6 bg-white rounded-2xl shadow-soft h-full">
+              <div class="flex items-center gap-2 text-yellow-500">★★★★★<span class="ml-2 text-slate-600 text-sm">5/5</span></div>
+              <p class="mt-3">Nous avons gagné du temps et obtenu un meilleur prix sans effort.</p>
+              <p class="mt-2 text-sm text-slate-500">Avis client (exemple)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services client -->
+  <section class="py-16">
+    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold">Service client expert, réactif et dédié</h2>
+        <ul class="mt-4 space-y-2 text-slate-700">
+          <li>• Équipe basée en France</li>
+          <li>• Veille marché continue</li>
+          <li>• Courtier & analyste dédiés</li>
+          <li>• Téléphone, e‑mail, chat</li>
+        </ul>
+      </div>
+      <div>
+        <div class="aspect-[4/3] rounded-2xl bg-white shadow-soft flex items-center justify-center">
+          <span class="text-slate-500">Illustration service (placeholder)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloc devis / contact -->
+  <section id="devis" class="py-16 bg-gradient-to-br from-primary-700 to-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold">Simulez votre nouvelle facture d’énergie</h2>
+      <p class="mt-2 opacity-90">Appel d’offres en temps réel. Export PDF. Suivi inclus.</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 items-center justify-center">
+        <!-- TODO: remplacez le mail et/ou le lien vers votre formulaire CRM/Typeform -->
+        <a href="mailto:contact@elgaenergy.com?subject=Demande%20de%20comparaison%20%E2%80%94%20Elga%20Energy" class="rounded-xl bg-white/10 backdrop-blur px-6 py-3 font-semibold hover:bg-white/20 transition">Par e‑mail</a>
+        <a href="#" class="rounded-xl bg-white text-primary-700 px-6 py-3 font-semibold hover:bg-slate-100 transition">Formulaire en ligne</a>
+        <a href="#" class="rounded-xl bg-white/10 backdrop-blur px-6 py-3 font-semibold hover:bg-white/20 transition">WhatsApp</a>
+      </div>
+      <p class="mt-2 text-sm opacity-80">Sans frais & sans engagement.</p>
+    </div>
+  </section>
+
+  <!-- Mentions & contact -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10">
+      <div>
+        <h3 class="text-xl font-bold">Coordonnées</h3>
+        <p class="mt-3 text-slate-600">
+          <strong>Elga Energy</strong><br/>
+          <!-- Remplacez par vos coordonnées légales -->
+          Société : SAS au capital de … € — RCS … — TVA : …<br/>
+          Siège : …, …, France<br/>
+          Email : <a class="underline" href="mailto:contact@elgaenergy.com">contact@elgaenergy.com</a>
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold">Mentions légales (résumé)</h3>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+          Le présent site présente une activité de courtage en énergie à destination des professionnels. Les textes et visuels sont fournis à titre informatif. Les marques et logos de tiers demeurent la propriété de leurs titulaires et ne sont affichés qu’avec autorisation. Données personnelles : traitement limité à la gestion des demandes entrantes. Responsable de traitement : Elga Energy. DPO : <a class="underline" href="mailto:dpo@elgaenergy.com">dpo@elgaenergy.com</a>. Vous disposez de droits d’accès, de rectification et d’effacement (art. 15 à 22 RGPD).
+        </p>
+        <p class="mt-2 text-slate-500 text-xs">Hébergement : GitHub Pages (GitHub, Inc.). Pas de cookies marketing déposés par ce site.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="6" class="fill-primary-600"/></svg>
+        <span class="font-semibold">Elga Energy</span>
+      </div>
+      <div class="text-sm text-slate-500">© <span id="year"></span> — Tous droits réservés • <a href="#contact" class="underline">Mentions légales</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Swiper init
+    window.addEventListener('DOMContentLoaded', () => {
+      new Swiper('#suppliers-swiper', {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        loop: true,
+        autoplay: { delay: 2000 },
+        breakpoints: {
+          640: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 }
+        }
+      });
+
+      const testi = new Swiper('#testimonials-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop: true,
+        autoplay: { delay: 4000 },
+      });
+      document.getElementById('prevTesti').addEventListener('click', () => testi.slidePrev());
+      document.getElementById('nextTesti').addEventListener('click', () => testi.slideNext());
+    });
+  </script>
+</body>
+</html>
